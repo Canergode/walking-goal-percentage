@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int target_steps,steps_taken,percentage;
+
+    printf("What is your walking goal: ");
+    scanf("%d",&target_steps);
+
+    printf("How much did you walk today: ");
+    scanf("%d",&steps_taken);
+
+    percentage = (steps_taken * 100) / target_steps;
+
+    if(percentage >= 100)
+    {
+        printf("Congratulations! You reached your walking goal.");
+    }
+
+    else if(percentage >= 50)
+    {
+        printf("Good job, you are close to the goal.");
+    }
+    else
+    {
+        printf("You should walk more.");
+    }
+
+    printf("Status: %d completed.",percentage);
+
+    return 0;
+}
